@@ -68,7 +68,6 @@ jobs:
           path: dist
   deploy:
     needs: build
-    runs-on: ubuntu-latest
     uses: ./.github/workflows/reusable.yml # here is where reusing
   report:
     needs: [lint, deploy]
